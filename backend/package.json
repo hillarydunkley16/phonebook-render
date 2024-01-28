@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend of phonebook application ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hillarydunkley16/phonebook-render.git"
+  },
+  "author": "Hillary Dunkley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hillarydunkley16/phonebook-render/issues"
+  },
+  "homepage": "https://github.com/hillarydunkley16/phonebook-render#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
