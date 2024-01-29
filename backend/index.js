@@ -3,6 +3,7 @@ const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(cors())
+app.use(express.static('dist'))
 //need to be able to add entries, delete entries & search for entries
 let persons = [
     { name: 'Arto Hellas', number: '040-123456', id: 1 },

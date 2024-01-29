@@ -13,7 +13,7 @@ const update = (id, newObject) => {
   return axios.put(`${baseUrl}/${id}`, newObject)
 }
 const remove = (id) => {
-  return axios.delete(`http://localhost:3001/persons/${id}`)
+  return axios.delete(`${baseUrl}/${id}`)
 }
 
 
