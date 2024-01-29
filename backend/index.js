@@ -1,6 +1,8 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 app.use(express.json())
+app.use(cors())
 //need to be able to add entries, delete entries & search for entries
 let persons = [
     { name: 'Arto Hellas', number: '040-123456', id: 1 },
@@ -66,6 +68,6 @@ app.post('/api/persons', (request, response) => {
 
     response.json(person)
 })
-const PORT = 3001
+const PORT = process.env.PORT || 3001 
 app.listen(PORT)
 console.log(`Server running on port ${PORT}`)
