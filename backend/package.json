@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/hillarydunkley16/phonebook-render#readme",
   "dependencies": {
+    "axios": "^1.6.7",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "json-server": "^1.0.0-alpha.23"
   },
   "devDependencies": {
     "nodemon": "^3.0.3"
