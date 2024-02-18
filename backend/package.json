@@ -27,6 +27,7 @@
     "json-server": "^1.0.0-alpha.23"
   },
   "devDependencies": {
+    "@types/node": "^20.11.16",
     "nodemon": "^3.0.3"
   }
 }

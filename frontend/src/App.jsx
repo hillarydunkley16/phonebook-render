@@ -3,7 +3,7 @@ import React from 'react'
 import personService from './services/persons'
 import Person from './components/Person'
 import './index.css'
-import axios from 'axios'
+
 
 const Filter = (props) => {
   return (
