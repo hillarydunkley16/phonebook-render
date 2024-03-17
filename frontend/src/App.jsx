@@ -43,12 +43,13 @@ const Notification = ({ message }) => {
   )
 }
 const App = () => {
-  const [persons, setPersons] = useState([
-    { name: 'Arto Hellas', number: '040-123456', id: 1 },
-    { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
-    { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
-    { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
-  ]) 
+  // const [persons, setPersons] = useState([
+  //   { name: 'Arto Hellas', number: '040-123456', id: 1 },
+  //   { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
+  //   { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
+  //   { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
+  // ]) 
+  const [persons, setPersons] = useState([])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [searchInput, setSearchInput]= useState('')
@@ -101,7 +102,7 @@ const App = () => {
 
     const nameObject = {
       name: newName,
-      number: newNumber, 
+      phoneNumber: newNumber, 
       id: persons.length + 1,
     }
     
@@ -117,6 +118,10 @@ const App = () => {
           setMessage('')
         }, 5000)
       })
+      .catch(error => {
+        setMessage(error.response.data.error)
+        console.log(error.response.data.error)
+      })
      
 
     console.log('End of addName function');
@@ -127,12 +132,12 @@ const App = () => {
   }
   //change the name of an entry
   const handleNameChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setNewName(event.target.value)
   }
   //change the phone number of an entry
   const handleNumChange = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     setNewNumber(event.target.value)
   }
   //remove an entry
